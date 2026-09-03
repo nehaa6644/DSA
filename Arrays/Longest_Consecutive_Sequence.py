@@ -8,7 +8,6 @@ class Solution:
         num_set = set(nums)
 # Initialize the longest to keep track of the longest consecutive sequence.
         longest = 0
-# Iterate through each number in the set.
         for num in num_set:
 # Check if the previous number is not in the set
 # indicating the start of a new sequence.
@@ -16,12 +15,12 @@ class Solution:
 # Initialize current to the current number and length to 1.
                 current = num
                 length = 1
-# Using while loop to check whether the next consecutive number is in the set.
+#check whether the next consecutive number is in the set.
                 while current + 1 in num_set:
 # If it is present, increment current and length.
                     current += 1
                     length += 1
-# Update longest if the current length is greater than the longest found so far.
+# Update longest if the current length is greater than the longest found
                 longest = max(longest, length)
 #return the longest consecutive sequence length found.
         return longest
