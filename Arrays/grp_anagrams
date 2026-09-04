@@ -1,0 +1,22 @@
+# group anagrams together
+
+def groupAnagrams(strs):
+    groups = {}
+
+    for word in strs:
+# create a key by sorting the characters in the word
+        key = ''.join(sorted(word))
+
+        if key in groups:
+# append the word to the existing list
+            groups[key].append(word)
+        else:
+# create a new list
+            groups[key] = [word]
+
+    return list(groups.values())
+
+
+strs = ["top", "pot", "stop", "pots", "tops"]
+
+print(groupAnagrams(strs))
