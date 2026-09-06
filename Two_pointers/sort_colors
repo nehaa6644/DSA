@@ -1,0 +1,27 @@
+# sort colors
+def sortColors(nums):
+    low = 0  # points to next position of 0
+    mid = 0  # points for the current element
+    high = len(nums) - 1 # points for the next position of 2
+
+    while mid <= high:
+
+        if nums[mid] == 0:
+            # swap the current element with the element at low
+            nums[low], nums[mid] = nums[mid], nums[low]
+            low += 1
+            mid += 1
+
+        elif nums[mid] == 1:
+            mid += 1
+
+        else:
+            # swap the current element with the element at high
+            nums[mid], nums[high] = nums[high], nums[mid]
+            high -= 1
+
+nums = [2, 0, 2, 1, 1, 0]
+
+sortColors(nums)
+
+print(nums)
