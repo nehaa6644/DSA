@@ -20,7 +20,6 @@ class Solution:
         return result
 
 
-n = int(input("Enter n: "))
+n = 3
 
-obj = Solution()
-print(obj.generateParenthesis(n))
+print(n)
